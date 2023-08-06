@@ -1,4 +1,5 @@
 const jsonServer = require('json-server');
+const cors = require("cors");
 
 const db = {
     garage: [
@@ -95,7 +96,7 @@ server.patch('/engine', (req, res) => {
             delete state.blocked[id];
         }
 
-        setTimeout(() => res.header('Content-Type', 'application/json', "Access-Control-Allow-Origin", "*").status(200).send(JSON.stringify({ velocity, distance })), x);
+        setTimeout(() => res.header('Content-Type', 'application/json').status(200).send(JSON.stringify({ velocity, distance })), x);
     }
 });
 
