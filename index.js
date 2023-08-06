@@ -68,13 +68,13 @@ server.patch('/engine', (req, res) => {
             setTimeout(() => {
                 delete state.velocity[id];
                 delete state.blocked[id];
-                res.header('Content-Type', 'application/json', "Access-Control-Allow-Origin", "*").status(500).send('Car has been stopped suddenly. It\'s engine was broken down.');
+                res.header('Content-Type', 'application/json').status(500).send('Car has been stopped suddenly. It\'s engine was broken down.');
             }, Math.random() * x ^ 0);
         } else {
             setTimeout(() => {
                 delete state.velocity[id];
                 delete state.blocked[id];
-                res.header('Content-Type', 'application/json', "Access-Control-Allow-Origin", "*").status(200).send(JSON.stringify({ success: true }));
+                res.header('Content-Type', 'application/json').status(200).send(JSON.stringify({ success: true }));
             }, x);
         }
     } else {
