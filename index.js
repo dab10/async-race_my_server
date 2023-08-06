@@ -37,7 +37,7 @@ const server = jsonServer.create();
 const router = jsonServer.router(db);
 const middlewares = jsonServer.defaults();
 
-const PORT = 3000;
+const PORT = 'async-race-api-production-907c.up.railway.app';
 
 const state = { velocity: {}, blocked: {} };
 
